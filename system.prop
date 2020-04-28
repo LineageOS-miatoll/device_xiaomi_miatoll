@@ -52,6 +52,9 @@ ro.miui.build.region=in
 ro.miui.notch=1
 ro.product.mod_device=_global
 
+# Pre-Rendering
+ro.vendor.perf.scroll_opt=true
+
 # WFD
 persist.debug.wfd.enable=1
 vendor.sys.video.disable.ubwc=1
