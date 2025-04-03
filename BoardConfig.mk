@@ -19,6 +19,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
 
 # Audio
+AUDIO_FEATURE_ENABLED_ACDB_LICENSE := true
 AUDIO_FEATURE_ENABLED_AHAL_EXT := false
 AUDIO_FEATURE_ENABLED_DLKM := true
 AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := false
@@ -33,6 +34,9 @@ AUDIO_FEATURE_ENABLED_SSR := false
 AUDIO_FEATURE_ENABLED_SVA_MULTI_STAGE := true
 BOARD_SUPPORTS_OPENSOURCE_STHAL := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
+DOLBY_ENABLE := true
+DOLBY_DAP := true
+DOLBY_DDP := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := atoll
@@ -153,6 +157,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2023-05-01
 
 # Sepolicy
+include $(DEVICE_PATH)/sepolicy/dolby/SEPolicy.mk
 include $(DEVICE_PATH)/sepolicy/miuicamera/SEPolicy.mk
 include $(DEVICE_PATH)/sepolicy/misys/SEPolicy.mk
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
