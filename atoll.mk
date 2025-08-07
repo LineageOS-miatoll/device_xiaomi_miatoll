@@ -56,6 +56,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     DSPVolumeSynchronizer
 
+# AudioFX (LineageOS Equalizer)
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
